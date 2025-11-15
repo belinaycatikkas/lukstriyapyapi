@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Seferihisar Kıyı Villaları - Deniz manzaralı, özel havuzlu A ve B tipi villalardan oluşan seçkin bir yaşam alanı.">
-    <meta name="keywords" content="Seferihisar, villa, deniz manzaralı, havuzlu villa, müstakil villa, ikiz villa">
-    <title>Seferihisar Kıyı Villaları</title>
+    <meta name="description" content="Aethel Konsept - Doğru alanda projeler üretiyoruz. 1990'lı yıllardan bu yana değer üreten mimari eserler geliştiriyoruz.">
+    <meta name="keywords" content="Aethel Konsept, inşaat, gayrimenkul, proje, mimari">
+    <title>Aethel Konsept - Geleceği İnşa Ediyoruz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,202 +14,278 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo">Seferihisar Kıyı Villaları</a>
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 1rem; text-decoration: none;">
+                <img src="assets/img/logo/onlylogo.png" alt="Aethel Konsept" style="height: 50px; width: auto;">
+                <div>
+                    <div style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); line-height: 1.2;">AETHEL KONSEPT</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400; line-height: 1.2;">Ayrıcalığın en yüksek formu</div>
+                </div>
+            </a>
             <button class="menu-toggle" aria-label="Menü">☰</button>
             <nav class="main-nav">
-                <a href="#project">Proje</a>
-                <a href="#masterplan">Masterplan</a>
-                <a href="#villas">Villa Tipleri</a>
-                <a href="#features">Özellikler</a>
-                <a href="#gallery">Galeri</a>
-                <a href="#contact">İletişim</a>
+                <a href="index.html" class="active">Ana Sayfa</a>
+                <a href="projelerimiz.html">Projelerimiz</a>
+                <a href="kurumsal.html">Kurumsal</a>
+                <a href="medya.html">Medya</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="#" class="nav-cta" id="seferihisar-cta">Seferihisar'a Geliyoruz</a>
             </nav>
+            <a href="tel:+902165004900" class="header-phone">
+                <span>📞</span>
+                <span>444 9 327</span>
+            </a>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Seferihisar'da Kıyıya Komşu Modern Villalar</h1>
-                <p>Deniz manzaralı, özel havuzlu A ve B tipi villalardan oluşan seçkin bir yaşam.</p>
-                <div class="hero-actions">
-                    <a href="a-tipi-villa.html" class="btn primary">A Tipi Villaları İncele</a>
-                    <a href="#contact" class="btn secondary">Bilgi Al</a>
+    <section class="hero-carousel">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="assets/img/anasayfa/WhatsApp Image 2025-11-15 at 16.29.43 (1).jpeg" alt="Aethel Konsept Projeleri">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>Geleceği İnşa Ediyoruz</h1>
+                            <p>Her proje, yalnızca "inşa" değil; bir yaşam biçiminin, bir gelecek vizyonunun yeniden yorumlanmasıdır. "Doğru zamanda, doğru alanda" olma stratejisini ilke edinen Aethel Konsept, estetik, teknoloji ve insan odaklı tasarımı bir araya getirerek ayrıcalıklı yaşam alanları sunuyor.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/img/masterplan.jpg" alt="Seferihisar Kıyı Villaları Masterplan">
+            <div class="hero-slide">
+                <img src="assets/img/anasayfa/WhatsApp Image 2025-11-15 at 16.34.45.jpeg" alt="Aethel Konsept Projeleri">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>Doğru Alanda Projeler Üretiyoruz</h1>
+                            <p>1990'lı yıllardan bu yana yalnızca binalar değil, değer üreten mimari eserler geliştiriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <img src="assets/img/anasayfa/WhatsApp Image 2025-11-15 at 16.36.28.jpeg" alt="Aethel Konsept Projeleri">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>Ayrıcalığın En Yüksek Formu</h1>
+                            <p>Her biri nitelikli, özgün, karakter sahibi ve mimari kimliği güçlü yapılardan oluşur.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="project" class="section">
-        <div class="container two-column">
-            <div>
-                <h2>Proje Hakkında</h2>
-                <p>Seferihisar Kıyı Villaları, sahile yürüme mesafesinde konumlanan, her biri özel havuzlu sınırlı sayıda villadan oluşan butik bir projedir. Peyzajlı yürüyüş &amp; bisiklet yolu, ortak sosyal alanlar ve geniş deniz manzarasıyla öne çıkar.</p>
-                <ul class="feature-list">
-                    <li>Yürüyüş &amp; bisiklet yolu sahile bağlanır.</li>
-                    <li>Her villaya özel bahçe ve yüzme havuzu.</li>
-                    <li>Elektrikli araç şarj üniteleri ve kapalı otopark.</li>
-                    <li>Modern mimari ve geniş cam cepheler.</li>
-                </ul>
+        <div class="hero-controls">
+            <button class="hero-prev" aria-label="Önceki">‹</button>
+            <div class="hero-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
             </div>
-            <div class="image-box">
-                <img src="assets/img/masterplan.jpg" alt="Proje genel görünüm">
-            </div>
+            <button class="hero-next" aria-label="Sonraki">›</button>
         </div>
+        <a href="#" class="hero-cta-button" id="hero-info-form">PROJELER ›</a>
     </section>
 
-    <section id="masterplan" class="section section--fullwidth">
+    <section class="milestones">
         <div class="container">
-            <h2>Masterplan</h2>
-            <p>Ortada konumlanan sosyal alan ve havuz, etrafında yerleşen A ve B tipi villalar ile sahile uzanan yürüyüş &amp; bisiklet yolu, projeyi bütüncül bir yaşam alanına dönüştürür.</p>
-            <ul class="feature-list" style="max-width: 800px; margin: 2rem auto;">
-                <li>Yürüyüş &amp; bisiklet yolu sahile kadar uzanır.</li>
-                <li>Her villaya özel bahçe ve havuz.</li>
-                <li>Araç girişleri ve otoparklar villaların arka kotunda konumlanır.</li>
-                <li>Ortak sosyal alan ve havuz merkezi konumda yer alır.</li>
-            </ul>
-        </div>
-        <div class="masterplan-image">
-            <img src="assets/img/masterplan.jpg" alt="Kuşbakışı Masterplan">
-        </div>
-        <div class="container" style="margin-top: 3rem;">
-            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Sosyal Alanlar</h3>
-            <div class="social-area-grid">
-                <div class="image-box">
-                    <img src="assets/img/sosyal-alan-1.jpg" alt="Sosyal Alan 1">
+            <div class="milestones-header">
+                <div class="subtitle">BAŞARILARIMIZ</div>
+                <h2>Mimari Mükemmelliğin İzinde</h2>
+                <p>1990'lı yıllardan bu yana, yalnızca binalar değil, şehirlerin kimliğini şekillendiren mimari eserler inşa ediyoruz. Her projemiz, estetik değerlerle teknik mükemmelliği bir araya getirerek, yaşam kalitesini yükselten ve çevreye değer katan yapılar olarak hayata geçiyor.</p>
+            </div>
+            <div class="milestones-grid">
+                <div class="milestone-item">
+                    <div class="milestone-number">30+</div>
+                    <div class="milestone-title">Yıllık Deneyim</div>
+                    <p>1990'dan bu yana sektörde öncü konumumuz</p>
                 </div>
-                <div class="image-box">
-                    <img src="assets/img/sosyal-alan-2.jpg" alt="Sosyal Alan 2">
+                <div class="milestone-item">
+                    <div class="milestone-number">100+</div>
+                    <div class="milestone-title">Tamamlanan Proje</div>
+                    <p>Başarıyla teslim edilen mimari eserler</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">50+</div>
+                    <div class="milestone-title">Uluslararası Ödül</div>
+                    <p>Mimarlık ve tasarım alanında kazanılan ödüller</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">%98</div>
+                    <div class="milestone-title">Müşteri Memnuniyeti</div>
+                    <p>Projelerimizden memnun kalan müşteri oranı</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-icon">🏆</div>
+                    <div class="milestone-title">Yılın Gayrimenkul Markası</div>
+                    <p>Üst üste üç yıl sektörün en itibarlı markası</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-icon">⭐</div>
+                    <div class="milestone-title">Mimari Mükemmellik</div>
+                    <p>Uluslararası mimarlık ödülleri ile taçlandırılan projeler</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-icon">🌍</div>
+                    <div class="milestone-title">Sürdürülebilir Tasarım</div>
+                    <p>Çevre dostu ve enerji verimli yapılar</p>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-icon">💎</div>
+                    <div class="milestone-title">Lüks Yaşam Standartları</div>
+                    <p>Her detayda mükemmellik arayışı</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="villas" class="section">
+    <section class="corporate-section">
         <div class="container">
-            <h2>Villa Tipleri</h2>
-            <div class="villa-cards">
-                <article class="villa-card">
-                    <img src="assets/img/a-villa.jpg" alt="A Tipi Villa">
-                    <h3>A Tipi Müstakil Villa</h3>
-                    <p>Geniş bahçe ve infinity havuza sahip, tam bağımsız yaşam sunan modern villa. Deniz manzarasını maksimum seviyede içeri alan geniş cam cepheler ve özel teras alanları.</p>
-                    <a href="a-tipi-villa.html" class="btn link">Detaylı Bilgi</a>
-                </article>
-
-                <article class="villa-card">
-                    <img src="assets/img/b-villa.jpg" alt="B Tipi İkiz Villa">
-                    <h3>B Tipi İkiz Villa</h3>
-                    <p>Her bağımsız bölüme özel havuz ve otoparkla planlanan, verimli yerleşimli ikiz villalar. Modern mimari ve fonksiyonel yaşam alanları.</p>
-                    <a href="b-tipi-villa.html" class="btn link">Detaylı Bilgi</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="section section--light">
-        <div class="container">
-            <h2>Öne Çıkan Özellikler</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="icon">🌊</div>
-                    <h3>Deniz Manzarası</h3>
-                    <p>Geniş cam cephelerle deniz manzarasını içeri alan tasarım</p>
+            <h2>Doğru alanda projeler üretiyoruz</h2>
+            <div class="content">
+                <div>
+                    <p>Aethel Konsept – Türkiye'ye Güveniyor, Güçlü Finansal Yapımızla Yatırımlarımıza Kararlılıkla Devam Ediyoruz</p>
+                    <p>1990'lı yıllardan bu yana yalnızca binalar değil, değer üreten mimari eserler geliştiriyoruz. Fark yaratmak için çoğu kişinin cesaret edemediği yöntemleri benimsiyor, özgün ve yüksek standartlı projeleri kararlılıkla hayata geçiriyoruz. Her katın, hatta her dairenin bir diğerinden bilinçli şekilde farklı tasarlandığı projelerimizde; yalnızca dış cephede değil, iç mekânda da mücevher işçiliği gösteren bir mimari anlayışla çalışıyoruz.</p>
+                    <p>Aethel Konsept projeleri sıradan konut kategorisine sığmaz. Her biri nitelikli, özgün, karakter sahibi ve mimari kimliği güçlü yapılardan oluşur. Kentsel dokuda hemen fark edilir, bulundukları bölgenin vitrini hâline gelir.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon">🏊</div>
-                    <h3>Özel Havuz</h3>
-                    <p>Her villaya özel infinity havuz ve teras alanı</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">⚡</div>
-                    <h3>Elektrikli Araç Şarj</h3>
-                    <p>Her villada elektrikli araç şarj ünitesi</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">🚗</div>
-                    <h3>Kapalı Otopark</h3>
-                    <p>Her villaya özel kapalı otopark alanı</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">🏗️</div>
-                    <h3>Modern Mimari</h3>
-                    <p>Geniş cam cepheler, doğal taş ve ahşap detaylar</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">🌳</div>
-                    <h3>Peyzajlı Alanlar</h3>
-                    <p>Ortak peyzajlı yürüyüş ve bisiklet yolları</p>
+                <div>
+                    <p><strong>Vizyonumuz:</strong> Dünyanın Hayranlık Duyduğu Yapıları Türkiye'de İnşa Etmek</p>
+                    <p>Hedefimiz; ilkeli, yenilikçi ve sürdürülebilir yaklaşımımızdan taviz vermeden, dünya mimarisiyle tam uyumlu projeler üretmek. Bugün yurt dışında önünden geçerken hayranlıkla izlediğimiz binaların benzerlerini ülkemizin topraklarında, çağın ötesine taşan bir üslupla inşa etmektir.</p>
+                    <p><strong>Geleceğin Binalarını Bugünden İnşa Ediyoruz</strong></p>
+                    <p>Aethel Konsept projeleri; yüksek mimari kimliği, teknik üstünlüğü ve özgün tasarımıyla şehirlerde yeni bir estetik çizgi oluşturuyor. Nasıl ki Gaudí'nin eserleri sokakta yürürken bir anda insanı durduran bir etki bırakıyorsa, Aethel Konsept'in tasarımları da benzer şekilde bulundukları bölgenin havasını değiştiriyor; tekdüze yapıların arasında masalsı bir duruş sergiliyor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="section">
+    <section class="board-section">
         <div class="container">
-            <h2>Galeri</h2>
-            <div class="gallery-grid">
-                <img src="assets/img/a-villa.jpg" alt="A Tipi Villa Görünüm">
-                <img src="assets/img/b-villa.jpg" alt="B Tipi Villa Görünüm">
-                <img src="assets/img/masterplan.jpg" alt="Masterplan Görünüm">
-                <img src="assets/img/sosyal-alan-1.jpg" alt="Sosyal Alan 1">
-                <img src="assets/img/sosyal-alan-2.jpg" alt="Sosyal Alan 2">
-                <img src="assets/img/a-tipi-zemin-kat.jpg" alt="A Tipi Villa Zemin Kat Planı">
-                <img src="assets/img/a-tipi-1-kat.jpg" alt="A Tipi Villa 1. Kat Planı">
-                <img src="assets/img/b-tipi-zemin-kat.jpg" alt="B Tipi Villa Zemin Kat Planı">
-                <img src="assets/img/b-tipi-1-kat.jpg" alt="B Tipi Villa 1. Kat Planı">
+            <div class="board-header">
+                <div class="subtitle">YÖNETİM KURULU</div>
+                <h2>Yönetim kurulumuzu</h2>
+                <h3>yakından tanıyın</h3>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section section--light">
-        <div class="container">
-            <h2>Bilgi ve Randevu</h2>
-            <p>Detaylı bilgi ve yerinde sunum için bizimle iletişime geçebilirsiniz.</p>
-            <div class="contact-info">
-                <p>Telefon: <a href="tel:+90XXXXXXXXXX">+90 XXX XXX XX XX</a></p>
-                <p>E-posta: <a href="mailto:info@seferihisarkiyivillalari.com">info@seferihisarkiyivillalari.com</a></p>
-                <p style="margin-top: 2rem;">
-                    <a href="contact.html" class="btn primary">İletişim Formu</a>
-                </p>
+            <div class="board-grid">
+                <div class="board-member">
+                    <img src="assets/img/yonetim/belin-ay-catikkas.jpg" alt="Belin Ay Çatıkkaş" onerror="this.src='https://via.placeholder.com/400x400?text=Belin+Ay+Catikkas'">
+                    <div class="board-member-info">
+                        <h4>BELİN AY ÇATIKKAŞ</h4>
+                        <p>Aethel Konsept – Yönetim Kurulu Başkanı</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="site-footer">
-        <div class="container">
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Seferihisar Kıyı Villaları</h3>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.75;">
-                    Deniz manzaralı, özel havuzlu A ve B tipi villalardan oluşan seçkin bir yaşam alanı. Modern mimari ve lüks detaylarla tasarlanmış villalar.
-                </p>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/img/logo/onlylogo.png" alt="Aethel Konsept">
+                <p>Doğru zamanda, doğru alanda projeler üreten, estetik, teknoloji ve insan odaklı tasarımı bir araya getirerek ayrıcalıklı yaşam alanları sunan bir inşaat ve gayrimenkul geliştirme şirketi.</p>
             </div>
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Hızlı Linkler</h3>
-                <p style="margin: 0.5rem 0;"><a href="index.html">Ana Sayfa</a></p>
-                <p style="margin: 0.5rem 0;"><a href="a-tipi-villa.html">A Tipi Villa</a></p>
-                <p style="margin: 0.5rem 0;"><a href="b-tipi-villa.html">B Tipi Villa</a></p>
-                <p style="margin: 0.5rem 0;"><a href="contact.html">İletişim</a></p>
+            <div class="footer-section">
+                <h3>Aethel Konsept</h3>
+                <ul>
+                    <li><a href="kurumsal.html">Kurumsal</a></li>
+                    <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                    <li><a href="medya.html">Medya</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
             </div>
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">İletişim</h3>
-                <p style="margin: 0.5rem 0; color: rgba(255, 255, 255, 0.8);">Seferihisar, İzmir</p>
-                <p style="margin: 0.5rem 0;"><a href="tel:+90XXXXXXXXXX">+90 XXX XXX XX XX</a></p>
-                <p style="margin: 0.5rem 0;"><a href="mailto:info@seferihisarkiyivillalari.com">info@seferihisarkiyivillalari.com</a></p>
+            <div class="footer-section">
+                <h3>Projeler</h3>
+                <ul>
+                    <li><a href="seferihisar-kıyı-villaları.html">Seferihisar Kıyı Villaları</a></li>
+                    <li><a href="projelerimiz.html">Tüm Projeler</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>Altayçeşme Mahallesi, Zeytindalı Sokak, No:16 B Blok<br>Maltepe / İstanbul</p>
+                <p><strong>Telefon:</strong> 0216 500 49 00</p>
+                <p><strong>Çağrı Merkezi:</strong> 444 9 327</p>
+                <p><strong>Faks:</strong> 0216 500 49 98</p>
+                <p><strong>E-Posta:</strong> info@aethelkonsept.com</p>
             </div>
         </div>
-        <div class="container" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">© 2025 Seferihisar Kıyı Villaları. Tüm hakları saklıdır.</p>
-            <p style="margin-top: 1rem; font-size: 0.875rem;">
-                <a href="#kvkk" style="margin: 0 0.5rem;">KVKK Aydınlatma Metni</a> | 
-                <a href="#gizlilik" style="margin: 0 0.5rem;">Gizlilik Politikası</a>
-            </p>
+        <div class="container footer-bottom">
+            <div class="footer-social">
+                <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                <a href="#" class="social-icon" aria-label="X (Twitter)">X</a>
+                <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+            </div>
+            <div class="footer-legal">
+                <a href="#kvkk">Kişisel Verilerin Korunması</a>
+                <a href="#ticari">Ticari Elektronik İleti Açık Rıza Metni</a>
+                <a href="#cerez">Çerez Politikaları</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Aethel Konsept. Tüm hakları saklıdır.
+            </div>
         </div>
     </footer>
+
+    <div class="fixed-sidebar">
+        <a href="#" class="sidebar-button" id="sidebar-info-form">BİLGİ FORMU</a>
+        <a href="https://wa.me/905XXXXXXXXX" class="sidebar-whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Bilgi Formu Modal -->
+    <div class="info-form-modal" id="infoFormModal">
+        <div class="info-form-overlay"></div>
+        <div class="info-form-container">
+            <button class="info-form-close" id="closeInfoForm" aria-label="Kapat">×</button>
+            <form class="info-form" id="infoForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Ad</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Soyad</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <div class="phone-input-group">
+                        <select id="phoneCode" name="phoneCode" class="phone-code">
+                            <option value="+90">+90</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" placeholder="(____) ____ ____" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="project">İlgilendiği Proje</label>
+                    <select id="project" name="project" required>
+                        <option value="">Seçiniz</option>
+                        <option value="seferihisar">Seferihisar Kıyı Villaları</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+                <div class="form-checkboxes">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent1" name="consent1" required>
+                        <span>Aydınlatma Metni ve Açık Rıza Beyanı'nı okudum, kabul ediyorum.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent2" name="consent2">
+                        <span>Aethel Konsept'e ait tüm kampanyalardan telefon ve e-posta yolu ile haberdar olmak istiyorum.</span>
+                    </label>
+                </div>
+                <button type="submit" class="form-submit-btn">GÖNDER ›</button>
+            </form>
+        </div>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
