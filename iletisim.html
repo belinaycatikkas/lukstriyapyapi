@@ -110,7 +110,8 @@
                             id="phone" 
                             name="phone" 
                             required 
-                            style="width: 100%; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: var(--font-size-base); font-family: var(--font-family);"
+                            placeholder="5XX XXX XX XX"
+                            style="width: 100%; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: var(--font-size-base); font-family: var(--font-family); pointer-events: auto; user-select: text; -webkit-user-select: text;"
                         >
                     </div>
                     
@@ -167,6 +168,17 @@
                         Gönder
                     </button>
                 </form>
+                
+                <!-- Başarı Mesajı -->
+                <div class="form-success-message" id="contactFormSuccess" style="display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 2rem; min-height: 300px; background-color: var(--light-gray); border-radius: 12px;">
+                    <div class="success-icon" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="width: 40px; height: 40px;">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-3xl); font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Başarıyla Gönderildi!</h3>
+                    <p style="font-size: var(--font-size-lg); color: var(--text-light); line-height: 1.6; max-width: 400px;">Talebiniz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.</p>
+                </div>
                 
                 <p style="text-align: center; margin-top: 1.5rem; font-size: var(--font-size-sm); color: var(--text-light);">
                     * Zorunlu alanlar
@@ -238,9 +250,41 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Form gönderimi şu anda aktif değil. Lütfen telefon veya e-posta ile iletişime geçin.');
+            
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('contactFormSuccess');
+            
+            // Formu gizle
+            form.style.display = 'none';
+            
+            // Başarı mesajını göster
+            if (successMessage) {
+                successMessage.style.display = 'flex';
+                successMessage.style.animation = 'successFadeIn 0.5s ease';
+            }
+            
+            // 3 saniye sonra formu tekrar göster
+            setTimeout(function() {
+                form.style.display = 'block';
+                form.reset();
+                if (successMessage) {
+                    successMessage.style.display = 'none';
+                }
+            }, 3000);
         });
     </script>
+    <style>
+        @keyframes successFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
 </body>
 </html>
 

@@ -147,9 +147,54 @@ function initInfoForm() {
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Form gönderimi burada yapılabilir
-            alert('Form gönderimi şu anda aktif değil. Lütfen telefon veya e-posta ile iletişime geçin.');
-            closeModal();
+            
+            // Submit butonunu devre dışı bırak
+            const submitBtn = form.querySelector('.form-submit-btn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Gönderiliyor...';
+            }
+            
+            // Formu fade out yap
+            form.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            form.style.opacity = '0';
+            form.style.transform = 'translateX(-20px)';
+            
+            // Başarı mesajını göster
+            setTimeout(function() {
+                form.style.display = 'none';
+                
+                const successMessage = document.getElementById('formSuccessMessage');
+                if (successMessage) {
+                    successMessage.style.display = 'flex';
+                    // Force reflow
+                    successMessage.offsetHeight;
+                    successMessage.classList.add('active');
+                }
+                
+                // 3 saniye sonra modal'ı kapat
+                setTimeout(function() {
+                    if (successMessage) {
+                        successMessage.classList.remove('active');
+                        setTimeout(function() {
+                            successMessage.style.display = 'none';
+                        }, 300);
+                    }
+                    closeModal();
+                    
+                    // Formu tekrar göster
+                    setTimeout(function() {
+                        form.style.display = 'block';
+                        form.style.opacity = '1';
+                        form.style.transform = 'translateX(0)';
+                        form.reset();
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = 'GÖNDER ›';
+                        }
+                    }, 100);
+                }, 3000);
+            }, 300);
         });
     }
 }

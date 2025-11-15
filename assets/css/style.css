@@ -810,7 +810,7 @@ body {
     background-color: #2c2c2c;
     margin-left: auto;
     padding: 3rem 2rem 2rem;
-    overflow-y: auto;
+    overflow: hidden;
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
     animation: slideInRight 0.3s ease;
     z-index: 1;
@@ -852,6 +852,11 @@ body {
 
 .info-form {
     width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 0.5rem;
 }
 
 .form-row {
@@ -890,6 +895,12 @@ body {
 .form-group select:focus {
     outline: none;
     border-bottom-color: var(--gold);
+    border-bottom-width: 2px;
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group select:valid:not([value=""]) {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .form-group input::placeholder {
@@ -900,6 +911,8 @@ body {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .phone-code {
@@ -920,6 +933,15 @@ body {
 
 .phone-input-group input {
     flex: 1;
+    pointer-events: auto !important;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    position: relative;
+    z-index: 10 !important;
+    background: transparent;
+    cursor: text !important;
 }
 
 .form-checkboxes {
@@ -968,10 +990,125 @@ body {
     margin-top: 1rem;
 }
 
-.form-submit-btn:hover {
+.form-submit-btn:hover:not(:disabled) {
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--white);
     transform: translateX(5px);
+}
+
+.form-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Başarı Mesajı */
+.form-success-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    min-height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: #2c2c2c;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-success-message.active {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    animation: successFadeIn 0.5s ease;
+}
+
+@keyframes successFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    animation: successIconScale 0.6s ease 0.2s both;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+@keyframes successIconScale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--white);
+    stroke-width: 3;
+    animation: checkmarkDraw 0.5s ease 0.4s both;
+}
+
+@keyframes checkmarkDraw {
+    0% {
+        stroke-dasharray: 0 24;
+    }
+    100% {
+        stroke-dasharray: 24 24;
+    }
+}
+
+.form-success-message h3 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    animation: successTextSlide 0.5s ease 0.6s both;
+}
+
+@keyframes successTextSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-success-message p {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 400px;
+    animation: successTextSlide 0.5s ease 0.8s both;
 }
 
 /* Breadcrumb */

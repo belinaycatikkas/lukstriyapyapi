@@ -241,7 +241,7 @@
                         <select id="phoneCode" name="phoneCode" class="phone-code">
                             <option value="+90">+90</option>
                         </select>
-                        <input type="tel" id="phone" name="phone" placeholder="(____) ____ ____" required>
+                        <input type="text" id="phone" name="phone" placeholder="5XX XXX XX XX" autocomplete="off" inputmode="numeric" pattern="[0-9]*" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -264,6 +264,16 @@
                 </div>
                 <button type="submit" class="form-submit-btn">GÖNDER ›</button>
             </form>
+            <!-- Başarı Mesajı -->
+            <div class="form-success-message" id="formSuccessMessage">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                </div>
+                <h3>Başarıyla Gönderildi!</h3>
+                <p>Talebiniz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.</p>
+            </div>
         </div>
     </div>
 
